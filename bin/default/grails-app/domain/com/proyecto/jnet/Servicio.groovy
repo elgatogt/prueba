@@ -5,7 +5,8 @@ class Servicio {
     Date fechaInstalacion = new Date()
     Date fechaCancelacion = null
     String usuario
-    String clave    
+    String clave
+    boolean activo = true
     boolean cortecia = false  // Si el servicio se da gratis
 
     // Instalacion
