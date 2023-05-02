@@ -19,6 +19,26 @@
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
             <f:table collection="${servicioList}" />
+            <div class="table-responsive-sm">
+            <table class="table table-hover">
+                <thead>
+                    <th scope="col">Serie</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Observaciones</th>
+                    <th scope="col">Estado</th>
+                </thead>
+                <tbody>
+                    <g:each in="${servicioList}" >
+                        <tr>
+                            <td  scope="row"><g:link action="show" id="${it.id}">${it.serie}</g:link></td>                                                        
+                            <td>${it.tipo}</td>
+                            <td>${it.observaciones}</td>
+                            <td>${it.estado}</td>
+                        </tr>
+                    </g:each>
+                </tbody>
+            </table>
+            </div>
 
             <div class="pagination">
                 <g:paginate total="${servicioCount ?: 0}" />
