@@ -18,22 +18,19 @@
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${servicioList}" />
             <div class="table-responsive-sm">
             <table class="table table-hover">
                 <thead>
-                    <th scope="col">Serie</th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Observaciones</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Direccion</th>
                     <th scope="col">Estado</th>
                 </thead>
                 <tbody>
                     <g:each in="${servicioList}" >
                         <tr>
-                            <td  scope="row"><g:link action="show" id="${it.id}">${it.serie}</g:link></td>                                                        
-                            <td>${it.tipo}</td>
-                            <td>${it.observaciones}</td>
-                            <td>${it.estado}</td>
+                            <td  scope="row"><g:link action="show" id="${it.id}">${it.usuario}</g:link></td>                                                        
+                            <td>${it.direccion}</td>
+                            <td>${it.activo}</td>                            
                         </tr>
                     </g:each>
                 </tbody>
