@@ -10,6 +10,7 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
 
     <asset:stylesheet src="application.css"/>
+    <script type="text/javascript" src="/assets/jquery-3.6.4.min.js?compile=false" ></script>
     
     <g:layoutHead/>
 </head>
